@@ -1,0 +1,35 @@
+.header {
+  position: sticky;
+  display: flex;
+  padding: 5px;
+  top: 15px;
+  flex-flow: row wrap;
+  transition: all ease-in-out 0.3s;
+}
+
+.header.active {
+  top: 0;
+  background: linear-gradient(
+    269.61deg,
+    #212121 0.05%,
+    #7d7d7d 101.12%,
+    #212121 101.12%
+  );
+}
+
+.logoWrapper {
+  flex: 1 0 40%;
+}
+
+.logo {
+  margin: 100px;
+  visibility: hidden;
+}
+
+.header.active .logo {
+  visibility: visible;
+}
+
+.menuWrapper {
+  flex: 1 0 30%;
+}
