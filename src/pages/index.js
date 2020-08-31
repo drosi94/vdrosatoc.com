@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Events } from "react-scroll"
+import { Events, Link } from "react-scroll"
 
 import Header from "../components/Header"
 import Section from "../components/Section"
@@ -37,16 +37,30 @@ export default () => {
       <Header scrolled={scrolled} />
       <main id="maincontent">
         <Section id="home" className="home">
-          <h1>Vasileios Drosatos</h1>
-          <h3>Web & Mobile Developer</h3>
-          <p>
-            Hey! I am Vasileios (a.k.a Bill) Drosatos. I am here to help you
-            design, create, and publish your website, your mobile app, or your
-            software-related idea.
-          </p>
+          <div className="mainTextContainer">
+            <h1 className="name">Vasileios Drosatos</h1>
+            <h3>Web & Mobile Developer</h3>
+            <p>
+              Hey! I am Vasileios (a.k.a Bill) Drosatos. I am here to help you
+              design, create, and publish your website, your mobile app, or your
+              software-related idea.
+            </p>
+          </div>
           <div className="buttonContainer">
             <Button>Learn More</Button>
             <Button className="contactMeButton">Contact Me</Button>
+          </div>
+          <div className="scrollDownContainer">
+            <Link
+              to="about"
+              spy={true}
+              hashSpy={true}
+              smooth={true}
+              offset={-82}
+              duration={500}
+            >
+              <img src="../assets/scroll-down-icon.png" />
+            </Link>
           </div>
         </Section>
         <Section id="about" className="about">

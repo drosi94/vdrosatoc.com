@@ -79,21 +79,33 @@ a {
   margin-top: -82px;
 }
 
+.container.scrolled {
+  margin-top: 0;
+}
+
 .home {
   height: 100vh;
   background-image: url("../assets/section1-bg.png");
   background-repeat: no-repeat;
+  background-position: center center;
   background-attachment: fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 12rem;
+  position: relative;
 }
 
-.home p {
-  width: 50%;
-  min-width: 32rem;
+.home .mainTextContainer .name {
+  width: 80%;
+  min-width: 30rem;
+  letter-spacing: 2.275rem;
+}
+
+.home .mainTextContainer p {
+  width: 55%;
+  min-width: 28rem;
   margin: 2rem 0;
   line-height: 1.84;
   font-size: 2.4rem;
@@ -102,15 +114,51 @@ a {
 .home .buttonContainer {
   display: flex;
   flex-wrap: wrap;
-  align-content: space-around;
 }
 
 .home .buttonContainer button {
-  flex: 1;
+  flex-basis: 20%;
+  min-width: 16rem;
+  margin: 0.5rem;
 }
 
-@media screen and (max-width: 720px) {
-  body {
-    font-size: 12px;
+.home .scrollDownContainer {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    margin-top: 0;
+  }
+
+  .home {
+    padding: 2rem;
+    justify-content: flex-start;
+  }
+
+  .home .mainTextContainer .name {
+    letter-spacing: 0.675rem;
+  }
+
+  .home .mainTextContainer p {
+    font-size: 2rem;
   }
 }
